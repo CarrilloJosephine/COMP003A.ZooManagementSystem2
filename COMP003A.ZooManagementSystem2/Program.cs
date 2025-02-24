@@ -39,14 +39,14 @@ namespace COMP003A.ZooManagementSystem
                             Console.WriteLine("Enter the species of the lion: ");
                             string lionSpecies = Console.ReadLine();
 
+                            Animals lion = new Lion(lionName, lionSpecies);
+                            zooAnimals.Add(lion);
+                            Console.WriteLine("Lion added successsfully");
+                            
                             if (string.IsNullOrWhiteSpace(lionName)) string.IsNullOrWhiteSpace(lionSpecies);
                             {
                                 Console.WriteLine("Name and species cant be empty ");
                             }
-
-                            Animals lion = new Lion(lionName, lionSpecies);
-                            zooAnimals.Add(lion);
-                            Console.WriteLine("Lion added successsfully");
                             break;
 
                         case "2":
@@ -55,14 +55,14 @@ namespace COMP003A.ZooManagementSystem
                             Console.Write("Enter the species of the parrot: ");
                             string parrotSpecies = Console.ReadLine();
 
+                            Animals parrot = new Parrot(parrotName, parrotSpecies);
+                            zooAnimals.Add(parrot);
+                            Console.WriteLine("Parrot added successfully!");
+
                             if (string.IsNullOrWhiteSpace(parrotName)) string.IsNullOrWhiteSpace(parrotSpecies);
                             {
                                 Console.WriteLine("Name and species cant be empty");
                             }
-
-                            Animals parrot = new Parrot(parrotName, parrotSpecies);
-                            zooAnimals.Add(parrot);
-                            Console.WriteLine("Parrot added successfully!");
                             break;
 
                         case "3":
